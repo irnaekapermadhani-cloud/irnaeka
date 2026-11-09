@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Website profil pribadi Irna Eka Permadhani.">
+  <title>Irna Eka Permadhani | Personal Profile</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --pink:#e879a8; --rose:#c94f83; --deep:#743653; --cream:#fff8fb; --ink:#553748; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; color:var(--ink); font-family:"DM Sans",sans-serif; background:#fff8fb; }
+    .page { overflow:hidden; background:linear-gradient(135deg,#fff9fc 0%,#fce5ef 48%,#f6c6dc 100%); min-height:100vh; }
+    nav { width:min(1100px,90%); margin:auto; padding:26px 0; display:flex; justify-content:space-between; align-items:center; gap:20px; }
+    .brand { font-family:"Playfair Display",serif; font-size:1.25rem; color:var(--deep); letter-spacing:.4px; }
+    nav a { color:#75465d; text-decoration:none; margin-left:22px; font-size:.9rem; font-weight:600; }
+    nav a:hover { color:var(--rose); }
+    .hero { width:min(1100px,90%); margin:30px auto 80px; display:grid; grid-template-columns:1.15fr .85fr; align-items:center; gap:55px; min-height:510px; }
+    .eyebrow { color:var(--rose); font-size:.78rem; letter-spacing:3px; text-transform:uppercase; font-weight:700; }
+    h1 { font:700 clamp(2.8rem,6vw,5.2rem)/1.08 "Playfair Display",serif; color:#713b56; margin:18px 0; }
+    h1 span { color:#d66f9c; }
+    .intro { max-width:550px; line-height:1.85; color:#79586a; font-size:1.03rem; }
+    .button { display:inline-block; margin-top:22px; padding:13px 24px; color:white; text-decoration:none; border-radius:30px; background:linear-gradient(100deg,#d66f9c,#b94f7d); box-shadow:0 10px 25px #c45d8b40; font-weight:700; transition:.25s; }
+    .button:hover { transform:translateY(-3px); box-shadow:0 14px 28px #c45d8b55; }
+    .portrait-wrap { position:relative; display:grid; place-items:center; }
+    .portrait { width:min(340px,75vw); aspect-ratio:1; border-radius:48% 52% 43% 57% / 48% 43% 57% 52%; background:linear-gradient(145deg,#f5b8d0,#d978a4 55%,#b94f7d); display:grid; place-items:center; box-shadow:0 25px 65px #a94b7640; transform:rotate(4deg); }
+    .portrait-inner { width:88%; height:88%; border:1px solid #ffffff9c; border-radius:inherit; display:grid; place-items:center; text-align:center; color:white; padding:25px; transform:rotate(-4deg); }
+    .portrait-inner .initial { font:700 5rem "Playfair Display",serif; }
+    .portrait-inner small { letter-spacing:2px; text-transform:uppercase; font-size:.68rem; }
+    .sparkle { position:absolute; color:#fff; font-size:2rem; text-shadow:0 2px 15px #d66f9c; }
+    .s1 { top:7%; right:10%; } .s2 { bottom:8%; left:5%; font-size:1.4rem; }
+    section { width:min(1000px,90%); margin:0 auto; padding:45px 0 65px; }
+    .section-title { text-align:center; font:700 clamp(2rem,4vw,2.8rem) "Playfair Display",serif; color:#713b56; margin:0 0 12px; }
+    .section-sub { text-align:center; color:#956d80; margin:0 auto 32px; line-height:1.7; }
+    .cards { display:grid; grid-template-columns:repeat(2,1fr); gap:22px; }
+    .card { padding:28px; border:1px solid #ffffffc9; border-radius:24px; background:#ffffffa8; box-shadow:0 12px 35px #9e52701a; backdrop-filter:blur(8px); }
+    .icon { width:48px; height:48px; display:grid; place-items:center; border-radius:16px; background:#f9d5e4; font-size:1.45rem; margin-bottom:16px; }
+    .card h3 { font:700 1.35rem "Playfair Display",serif; margin:0 0 8px; color:#854461; }
+    .card p { margin:0; line-height:1.75; color:#806174; }
+    .about { background:#fff9fc; width:100%; padding:65px 5%; }
+    .about-content { max-width:850px; margin:auto; text-align:center; }
+    .details { display:flex; flex-wrap:wrap; justify-content:center; gap:12px; margin-top:24px; }
+    .detail { background:#fbe5ee; border:1px solid #f4cada; border-radius:30px; padding:10px 16px; font-size:.9rem; }
+    .contact { text-align:center; padding-bottom:80px; }
+    .contact-box { max-width:650px; margin:28px auto 0; padding:30px; background:linear-gradient(135deg,#f8d7e5,#fcebf2); border-radius:25px; border:1px solid white; }
+    .contact-box a { color:#a43e6d; font-weight:700; text-decoration:none; overflow-wrap:anywhere; }
+    footer { text-align:center; padding:22px; color:#9b7184; font-size:.82rem; background:#fff9fc; }
+    @media(max-width:720px) { nav { align-items:flex-start; } nav div:last-child { display:flex; flex-wrap:wrap; justify-content:flex-end; gap:10px; } nav a { margin:0 0 0 10px; } .hero { grid-template-columns:1fr; text-align:center; gap:40px; margin-top:15px; } .intro { margin:auto; } .portrait-wrap { grid-row:1; } .cards { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+<div class="page">
+  <nav>
+    <div class="brand">Irna's Profile</div>
+    <div><a href="#tentang">Tentang</a><a href="#minat">Minat</a><a href="#kontak">Kontak</a></div>
+  </nav>
+
+  <main>
+    <div class="hero">
+      <div>
+        <div class="eyebrow">Welcome to my little space</div>
+        <h1>Hi, I'm<br><span>Irna Eka</span><br>Permadhani.</h1>
+        <p class="intro">Selamat datang di website pribadi saya! Saya senang mengeksplorasi hal-hal kreatif, terutama dunia makeup dan musik. Di sini, kamu bisa mengenal saya lebih dekat.</p>
+        <a class="button" href="#tentang">Kenali Saya</a>
+      </div>
+      <div class="portrait-wrap">
+        <span class="sparkle s1">✦</span><span class="sparkle s2">✧</span>
+        <div class="portrait"><div class="portrait-inner"><div><div class="initial">IE</div><small>Beauty • Music • Creativity</small></div></div></div>
+      </div>
+    </div>
+
+    <section class="about" id="tentang">
+      <div class="about-content">
+        <div class="eyebrow">A little about me</div>
+        <h2 class="section-title">Tentang Saya</h2>
+        <p class="section-sub">Saya adalah pribadi yang menyukai kreativitas dan ingin terus belajar mengembangkan kemampuan serta mencoba pengalaman baru.</p>
+        <div class="details">
+          <span class="detail">♡ Irna Eka Permadhani</span>
+          <span class="detail">⌖ Blitar, Jawa Timur</span>
+          <span class="detail">✉ irnaekapermadhani@gmail.com</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="minat">
+      <div class="eyebrow" style="text-align:center">Things I love</div>
+      <h2 class="section-title">Skill & Hobi</h2>
+      <p class="section-sub">Dua hal yang membuat saya senang mengekspresikan diri.</p>
+      <div class="cards">
+        <article class="card">
+          <div class="icon">💄</div>
+          <h3>Makeup</h3>
+          <p>Saya tertarik dengan makeup dan seni merias wajah. Saya senang belajar berbagai teknik serta mencoba kreativitas dalam setiap riasan.</p>
+        </article>
+        <article class="card">
+          <div class="icon">🎤</div>
+          <h3>Menyanyi</h3>
+          <p>Menyanyi adalah hobi yang saya sukai. Musik menjadi salah satu cara untuk mengekspresikan diri dan mengisi waktu luang.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="contact" id="kontak">
+      <div class="eyebrow">Say hello</div>
+      <h2 class="section-title">Hubungi Saya</h2>
+      <p class="section-sub">Terima kasih sudah mengunjungi website pribadi saya.</p>
+      <div class="contact-box">
+        <p>Jika ingin menghubungi saya, silakan melalui email:</p>
+        <a href="mailto:irnaekapermadhani@gmail.com">irnaekapermadhani@gmail.com</a>
+      </div>
+    </section>
+  </main>
+</div>
+<footer>© 2026 Irna Eka Permadhani · Made with ♡</footer>
+</body>
+</html>
